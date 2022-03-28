@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+}
+
+body {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-size: 100vw 100%;
+  }
+
+  .motionSelection {
+    height: calc(100vh - 0rem) !important;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
