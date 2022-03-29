@@ -21,10 +21,10 @@ function Destination() {
       const body = document.querySelector('body');
       if (windowScreen < 700) {
         body.style.backgroundImage =
-          'url(src/assets/destination/background-destination-mobile.jpg)';
+          'url(./src/assets/destination/background-destination-mobile.jpg)';
       } else {
         body.style.backgroundImage =
-          'url(src/assets/destination/background-destination-desktop.jpg)';
+          'url(./src/assets/destination/background-destination-desktop.jpg)';
       }
     }
   }, [location.pathname]);
