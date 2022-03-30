@@ -65,11 +65,11 @@ function Technology() {
         style={{ height: 'calc(100vh - 5.5rem)' }}
       >
         <div
-          className="col-span-1 lg:col-span-10 self-center w-full 
-        lg:col-start-1 lg:col-end-10 lg:grid-cols-10 lg:justify-center order-1 lg:pt-10"
+          className="col-span-1 lg:col-span-10 self-center w-full
+        lg:col-start-1 lg:col-end-10 lg:grid-cols-10 lg:justify-center pl-2 lg:pl-0 order-1 lg:pt-10"
         >
           <h2
-            className="self-center uppercase mx-auto max-w-md text-2xl 
+            className="self-center uppercase mx-auto max-w-md text-2xl
           lg:text-center lg:mx-0 lg:text-3xl lg:col-start-2 lg:col-end-10 lg:max-w-lg lg:self-end"
           >
             <span className="text-slate-400 mr-2">03</span> Space launch 101

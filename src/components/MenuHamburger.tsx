@@ -25,7 +25,7 @@ function MenuHamburger() {
         <>
           <div
             onClick={() => setIsOpen(!isOpen)}
-            className="absolute bottom-0 top-[0px] overflow-hidden w-[100vw] 
+            className="absolute bottom-0 top-[0px] overflow-hidden w-[100%]
           h-[100%] bg-transparent z-10"
           />
           <nav
@@ -40,8 +40,8 @@ function MenuHamburger() {
               }}
               className={`w-full p-5 mt-20 ${
                 activeItem === '/'
-                  ? 'pt-5 pb-5 border-r-[2px] border-transparent border-white'
-                  : 'pt-5 pb-5 border-r-[5px] border-transparent transition-all duration-300 hover:border-white'
+                  ? 'pt-5 pb-5 border-r-[5px] border-transparent border-white'
+                  : 'pt-5 pb-5 border-r-[10px] border-transparent transition-all duration-300 hover:border-white'
               }`}
             >
               <span className="pr-3">00</span>Home
@@ -54,8 +54,8 @@ function MenuHamburger() {
               }}
               className={`w-full p-5 ${
                 activeItem === '/destination'
-                  ? 'pt-5 pb-5 border-r-[2px] border-transparent border-white'
-                  : 'pt-5 pb-5 border-r-[5px] border-transparent transition-all duration-300 hover:border-white'
+                  ? 'pt-5 pb-5 border-r-[5px] border-transparent border-white'
+                  : 'pt-5 pb-5 border-r-[10px] border-transparent transition-all duration-300 hover:border-white'
               }`}
             >
               <span className="pr-3">01</span>Destination
@@ -68,8 +68,8 @@ function MenuHamburger() {
               }}
               className={`w-full p-5 ${
                 activeItem === '/crew'
-                  ? 'pt-5 pb-5 border-r-[2px] border-transparent border-white'
-                  : 'pt-5 pb-5 border-r-[5px] border-transparent transition-all duration-300 hover:border-white'
+                  ? 'pt-5 pb-5 border-r-[5px] border-transparent border-white'
+                  : 'pt-5 pb-5 border-r-[10px] border-transparent transition-all duration-300 hover:border-white'
               }`}
             >
               <span className="pr-3">02</span>Crew
@@ -82,8 +82,8 @@ function MenuHamburger() {
               }}
               className={`w-full p-5 ${
                 activeItem === '/technology'
-                  ? 'pt-5 pb-5 border-r-[2px] border-transparent border-white'
-                  : 'pt-5 pb-5 border-r-[5px] border-transparent transition-all duration-300 hover:border-white'
+                  ? 'pt-5 pb-5 border-r-[5px] border-transparent border-white'
+                  : 'pt-5 pb-5 border-r-[10px] border-transparent transition-all duration-300 hover:border-white'
               }`}
             >
               <span className="pr-3">03</span>Technology
