@@ -25,10 +25,10 @@ function Crew() {
       const body = document.querySelector('body');
       if (windowScreen < 700) {
         body.style.backgroundImage =
-          'url(src/assets/crew/background-crew-mobile.jpg)';
+          'url(src/assets/images/crew/background-crew-mobile.jpg)';
       } else {
         body.style.backgroundImage =
-          'url(src/assets/crew/background-crew-desktop.jpg)';
+          'url(src/assets/images/crew/background-crew-desktop.jpg)';
       }
     }
   }, [location.pathname]);
