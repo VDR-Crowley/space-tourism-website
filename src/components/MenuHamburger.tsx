@@ -14,7 +14,7 @@ function MenuHamburger() {
       <div className="relative z-30 right-5" onClick={() => setIsOpen(!isOpen)}>
         <img
           className="p-2"
-          src={`assets/shared/${
+          src={`assets/images/shared/${
             !isOpen ? 'icon-hamburger' : 'icon-close'
           }.svg`}
           alt="menu hamburger"
