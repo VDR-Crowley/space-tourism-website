@@ -20,17 +20,17 @@ function Technology() {
       const body = document.querySelector('body');
       if (windowScreen < 700) {
         body.style.backgroundImage =
-          'url(src/assets/images/technology/background-technology-mobile.jpg)';
+          'url(assets/images/technology/background-technology-mobile.jpg)';
       } else {
         body.style.backgroundImage =
-          'url(src/assets/images/technology/background-technology-desktop.jpg)';
+          'url(assets/images/technology/background-technology-desktop.jpg)';
       }
     }
   }, [location.pathname]);
 
   async function loadData() {
     setIsLoading(true);
-    await fetch('src/data.json')
+    await fetch('data.json')
       .then((res) => res.json())
       .then((req) => {
         console.log(req);

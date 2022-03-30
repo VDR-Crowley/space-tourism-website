@@ -25,17 +25,17 @@ function Crew() {
       const body = document.querySelector('body');
       if (windowScreen < 700) {
         body.style.backgroundImage =
-          'url(src/assets/images/crew/background-crew-mobile.jpg)';
+          'url(assets/images/crew/background-crew-mobile.jpg)';
       } else {
         body.style.backgroundImage =
-          'url(src/assets/images/crew/background-crew-desktop.jpg)';
+          'url(assets/images/crew/background-crew-desktop.jpg)';
       }
     }
   }, [location.pathname]);
 
   async function loadData() {
     setIsLoading(true);
-    await fetch('src/data.json')
+    await fetch('data.json')
       .then((res) => res.json())
       .then((req) => {
         setCrews(req.crew);

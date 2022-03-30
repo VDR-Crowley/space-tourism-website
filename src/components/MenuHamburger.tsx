@@ -8,13 +8,13 @@ function MenuHamburger() {
   return (
     <header className="w-full flex mt-5 items-center justify-between max-w-screen-2xl mx-auto">
       <div className="pl-5">
-        <img src="./src/assets/images/shared/logo.svg" />
+        <img src="assets/images/shared/logo.svg" />
       </div>
 
       <div className="relative z-30 right-5" onClick={() => setIsOpen(!isOpen)}>
         <img
           className="p-2"
-          src={`./src/assets/shared/${
+          src={`assets/shared/${
             !isOpen ? 'icon-hamburger' : 'icon-close'
           }.svg`}
           alt="menu hamburger"

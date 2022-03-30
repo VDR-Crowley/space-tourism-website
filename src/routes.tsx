@@ -11,7 +11,7 @@ export default function ReactRoutes() {
   return (
     <div className="overflow-x-hidden max-w-screen-2xl mx-auto">
         <Routes location={location}>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Home />} />
           <Route path="/destination" element={<Destination />} />
           <Route path="/crew" element={<Crew />} />
           <Route path="/technology" element={<Technology />} />

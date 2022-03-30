@@ -16,10 +16,10 @@ function Home() {
       const body = document.querySelector('body');
       if (windowScreen < 700) {
         body.style.backgroundImage =
-          'url(src/assets/images/home/background-home-mobile.jpg)';
+          'url(assets/images/home/background-home-mobile.jpg)';
       } else {
         body.style.backgroundImage =
-          'url(src/assets/images/home/background-home-desktop.jpg)';
+          'url(assets/images/home/background-home-desktop.jpg)';
       }
     }
   }, [location.pathname]);

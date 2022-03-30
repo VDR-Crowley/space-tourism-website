@@ -21,17 +21,17 @@ function Destination() {
       const body = document.querySelector('body');
       if (windowScreen < 700) {
         body.style.backgroundImage =
-          'url(src/assets/images/destination/background-destination-mobile.jpg)';
+          'url(assets/images/destination/background-destination-mobile.jpg)';
       } else {
         body.style.backgroundImage =
-          'url(src/assets/images/destination/background-destination-desktop.jpg)';
+          'url(assets/images/destination/background-destination-desktop.jpg)';
       }
     }
   }, [location.pathname]);
 
   async function loadData() {
     setIsLoading(true);
-    await fetch('src/data.json')
+    await fetch('data.json')
       .then((res) => res.json())
       .then((req) => {
         setDestinations(req.destinations);
