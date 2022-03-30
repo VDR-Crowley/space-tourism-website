@@ -34,7 +34,10 @@ function MenuHamburger() {
           >
             <Link
               to="/"
-              onClick={() => setActiveItem('/')}
+              onClick={() => {
+                setActiveItem('/');
+                setIsOpen(false);
+              }}
               className={`w-full p-5 mt-20 ${
                 activeItem === '/'
                   ? 'pt-5 pb-5 border-r-[2px] border-transparent border-white'
@@ -45,7 +48,10 @@ function MenuHamburger() {
             </Link>
             <Link
               to="/destination"
-              onClick={() => setActiveItem('/destination')}
+              onClick={() => {
+                setActiveItem('/destination');
+                setIsOpen(false);
+              }}
               className={`w-full p-5 ${
                 activeItem === '/destination'
                   ? 'pt-5 pb-5 border-r-[2px] border-transparent border-white'
@@ -56,7 +62,10 @@ function MenuHamburger() {
             </Link>
             <Link
               to="/crew"
-              onClick={() => setActiveItem('/crew')}
+              onClick={() => {
+                setActiveItem('/crew');
+                setIsOpen(false);
+              }}
               className={`w-full p-5 ${
                 activeItem === '/crew'
                   ? 'pt-5 pb-5 border-r-[2px] border-transparent border-white'
@@ -67,7 +76,10 @@ function MenuHamburger() {
             </Link>
             <Link
               to="/technology"
-              onClick={() => setActiveItem('/technology')}
+              onClick={() => {
+                setActiveItem('/technology');
+                setIsOpen(false);
+              }}
               className={`w-full p-5 ${
                 activeItem === '/technology'
                   ? 'pt-5 pb-5 border-r-[2px] border-transparent border-white'

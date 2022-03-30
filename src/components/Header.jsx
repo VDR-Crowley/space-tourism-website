@@ -16,12 +16,12 @@ function Header() {
         <img src="assets/images/shared/logo.svg" />
       </div>
 
-      <div className="relative flex-1">
+      <div className="relative flex-1 md:hidden lg:block">
         <div className="absolute w-[90%] h-[1px] bg-slate-400 right-[-10px] z-10" />
       </div>
 
       <nav
-        className="relative backdrop-blur-[100px] uppercase pl-10 pr-40 text-white 
+        className="relative backdrop-blur-[100px] uppercase pl-10 pr-40 md:pl-5 md:pr-5 text-white 
       grid grid-cols-4 gap-5"
       >
         <Link

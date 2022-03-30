@@ -22,6 +22,9 @@ function Destination() {
       if (windowScreen < 700) {
         body.style.backgroundImage =
           'url(assets/images/destination/background-destination-mobile.jpg)';
+      } else if (windowScreen < 1023) {
+        body.style.backgroundImage =
+          'url(assets/images/destination/background-destination-tablet.jpg)';
       } else {
         body.style.backgroundImage =
           'url(assets/images/destination/background-destination-desktop.jpg)';
@@ -53,7 +56,7 @@ function Destination() {
   if (destinations && destinations.length > 0) {
     return (
       <motion.section
-        className="motionSelection mt-5 lg:mt-0 text-white grid grid-cols-1 gap-y-10 lg:grid-cols-10"
+        className="motionDestination mt-5 md:mt-0 lg:mt-0 py-5 text-white grid grid-cols-1 gap-y-10 lg:grid-cols-10"
         initial={{ x: '100%' }}
         animate={{ x: 0 }}
         style={{ height: 'calc(100vh - 6rem)' }}
@@ -65,7 +68,7 @@ function Destination() {
           </h2>
           {destination && (
             <img
-              className="animate-spin w-96 transition-transform rounded-full"
+              className="animate-spin w-64 md:w-72 lg:w-96 transition-transform rounded-full"
               src={`${destination.images.png}`}
               alt="europa"
               style={{ animation: 'spin 10s linear infinite' }}
@@ -107,17 +110,17 @@ function Destination() {
                 </p>
                 <div
                   className="border-t-2 mx-10 lg:mx-0 border-slate-500 mt-10 flex 
-                flex-col lg:flex-row pt-5 text-lg"
+                flex-col md:flex-row md:justify-center lg:justify-start pt-5 text-lg"
                 >
-                  <div className="flex flex-col lg:mr-10">
+                  <div className="flex flex-col md:mr-10">
                     Avg. distance{' '}
-                    <span className="text-3xl mt-2 lg:mt-0">
+                    <span className="text-3xl mt-2 md:mt-0">
                       {destination.distance}
                     </span>
                   </div>
-                  <div className="flex flex-col mt-5 lg:mt-0">
+                  <div className="flex flex-col mt-5 md:mt-0">
                     Est. travel time{' '}
-                    <span className="text-3xl mt-2 lg:mt-0">
+                    <span className="text-3xl mt-2 md:mt-0">
                       {destination.travel}
                     </span>
                   </div>

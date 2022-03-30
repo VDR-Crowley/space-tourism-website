@@ -26,6 +26,9 @@ function Crew() {
       if (windowScreen < 700) {
         body.style.backgroundImage =
           'url(assets/images/crew/background-crew-mobile.jpg)';
+      } else if (windowScreen < 1023) {
+        body.style.backgroundImage =
+          'url(assets/images/crew/background-crew-tablet.jpg)';
       } else {
         body.style.backgroundImage =
           'url(assets/images/crew/background-crew-desktop.jpg)';
@@ -67,12 +70,12 @@ function Crew() {
         style={{ height: 'calc(100vh - 5.5rem)' }}
       >
         <div
-          className="col-span-1 lg:col-start-1 lg:col-end-5 justify-center w-full 
-        grid grid-cols-1 lg:grid-cols-10 lg:justify-center order-1 lg:pt-10"
+          className="col-span-1 md:col-span-5 lg:col-start-1 lg:col-end-5 justify-center w-full 
+        grid grid-cols-1 md:mb-10 lg:grid-cols-10 lg:justify-center order-1 lg:pt-10"
         >
           <div className="grid mx-auto lg:mx-0 lg:col-start-2 lg:col-end-10 lg:max-w-lg lg:self-end">
             <h2
-              className="text-2xl self-center uppercase mx-auto lg:order-1 flex text-center 
+              className="text-2xl self-center uppercase mx-auto md:order-1 lg:order-1 flex text-center 
             mt-5 lg:mt-0 lg:gap-0 lg:text-left w-full lg:text-3xl"
             >
               <span className="text-slate-400 mr-2">02</span> Meet your crew
@@ -101,7 +104,7 @@ function Crew() {
             )}
 
             <nav
-              className="grid grid-cols-4 order-1 lg:order-2 lg:mt-[6rem] mb-2 w-[35%] 
+              className="grid grid-cols-4 order-1 md:order-2 lg:order-2 md:mt-10 lg:mt-[6rem] mb-2 w-[35%] 
             lg:w-[25%] justify-self-center lg:justify-self-start items-center self-end"
             >
               {crews.map((_, i) => (
@@ -124,13 +127,13 @@ function Crew() {
 
         <div
           className="grid grid-cols-4 col-span-5 lg:col-span-6 items-end 
-        justify-self-center border-b border-slate-500 lg:border-b-0 w-[90%] lg:w-auto 
-        my-9 lg:my-0 lg:justify-self-stretch order-1 lg:order-2"
+        justify-self-center border-b border-slate-500 md:border-none lg:border-b-0 w-[90%] lg:w-auto 
+        my-9 lg:my-0 lg:justify-self-stretch order-1 md:order-3 lg:order-2"
         >
           <div className="col-span-5 grid justify-center lg:justify-center lg:h-full">
             {crew && (
               <img
-                className="w-44 lg:w-full lg:h-full transition-transform"
+                className="w-44 md:w-full lg:w-full lg:h-full transition-transform"
                 src={`${crew.images.png}`}
                 alt="europa"
               />

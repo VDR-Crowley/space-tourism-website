@@ -21,6 +21,9 @@ function Technology() {
       if (windowScreen < 700) {
         body.style.backgroundImage =
           'url(assets/images/technology/background-technology-mobile.jpg)';
+      } else if (windowScreen < 1023) {
+        body.style.backgroundImage =
+          'url(assets/images/technology/background-technology-tablet.jpg)';
       } else {
         body.style.backgroundImage =
           'url(assets/images/technology/background-technology-desktop.jpg)';
@@ -47,7 +50,7 @@ function Technology() {
   }
 
   function pointerClass(i) {
-    return `transition col-span-2 w-[4.5rem] p-4 lg:p-3 lg:w-full text-3xl rounded-full 
+    return `transition col-span-2 w-[4rem] h-[4rem] p-4 lg:p-3 lg:w-full text-3xl rounded-full 
     border border-slate-400 hover:bg-white hover:text-black cursor-pointer ${
       indexActive === i ? 'bg-white text-black' : ''
     }`;
@@ -58,7 +61,7 @@ function Technology() {
       <motion.section
         initial={{ x: '100%' }}
         animate={{ x: 0 }}
-        className="motionSelection mt-5 lg:mt-0 text-white grid grid-cols-1 lg:grid-cols-10"
+        className="motionSelection mt-5 md:mt-0 lg:mt-0 text-white grid grid-cols-1 lg:grid-cols-10"
         style={{ height: 'calc(100vh - 5.5rem)' }}
       >
         <div
@@ -86,7 +89,7 @@ function Technology() {
               {technologys.map((_, i) => (
                 <div
                   key={`item-${i}`}
-                  className="w-[4.5rem] h-[4.5rem] lg:w-[100%] lg:h-[4rem] cursor-pointer"
+                  className="w-[4.5rem] h-[4.5rem] my-5 lg:my-0 lg:w-[100%] lg:h-[4rem] cursor-pointer"
                 >
                   <div
                     className={pointerClass(i)}
@@ -102,7 +105,7 @@ function Technology() {
             </nav>
 
             {technology && (
-              <div className="col-span-6 mx-auto max-w-sm lg:pt-20 text-center lg:text-left">
+              <div className="col-span-6 mx-auto px-5 max-w-sm lg:px-0= lg:pt-20 text-center lg:text-left">
                 <div className="uppercase">The Terminology...</div>
                 <h2 className="uppercase lg:text-2xl text-slate-400">
                   {technology.role}

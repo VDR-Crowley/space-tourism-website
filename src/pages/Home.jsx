@@ -17,6 +17,9 @@ function Home() {
       if (windowScreen < 700) {
         body.style.backgroundImage =
           'url(assets/images/home/background-home-mobile.jpg)';
+      } else if (windowScreen < 1023) {
+        body.style.backgroundImage =
+          'url(assets/images/home/background-home-tablet.jpg)';
       } else {
         body.style.backgroundImage =
           'url(assets/images/home/background-home-desktop.jpg)';

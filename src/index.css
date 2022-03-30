@@ -19,6 +19,11 @@ body {
   .motionSelection {
     height: calc(100vh - 0rem) !important;
   }
+
+  .motionDestination {
+    height: calc(100% - 0rem) !important;
+
+  }
 }
 
 @keyframes spin {
