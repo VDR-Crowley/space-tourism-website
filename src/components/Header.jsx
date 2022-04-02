@@ -8,7 +8,7 @@ function Header() {
 
   React.useEffect(() => {
     setActiveItem(location.pathname);
-  }, []);
+  }, [location.pathname]);
 
   return (
     <header className="w-full flex mt-5 items-center justify-between max-w-screen-2xl mx-auto">
