@@ -104,8 +104,10 @@ function Destination() {
           <div className="col-span-1 text-center lg:text-left lg:col-span-5 lg:max-w-sm">
             {destination && (
               <>
-                <p className="text-9xl font-light my-5">{destination.name}</p>
-                <p className="mt-5 max-w-lg m-auto px-2 lg:px-0 lg:m-0">
+                <p className="text-9xl font-light my-5 lg:mt-0">
+                  {destination.name}
+                </p>
+                <p className="mt-5 max-w-lg m-auto px-2 lg:px-0 lg:m-0 lg:text-[1.5rem]">
                   {destination.description}
                 </p>
                 <div

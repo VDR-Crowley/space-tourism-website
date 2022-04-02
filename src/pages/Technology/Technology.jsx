@@ -105,15 +105,15 @@ function Technology() {
             </nav>
 
             {technology && (
-              <div className="col-span-6 mx-auto px-5 max-w-sm lg:px-0= lg:pt-20 text-center lg:text-left">
+              <div className="col-span-6 mx-auto px-5 max-w-sm lg:px-0 lg:pt-20 text-center lg:text-left">
                 <div className="uppercase">The Terminology...</div>
                 <h2 className="uppercase lg:text-2xl text-slate-400">
                   {technology.role}
                 </h2>
-                <p className="text-4xl lg:text-5xl mt-2 font-light">
+                <p className="uppercase text-4xl lg:text-5xl mt-2 font-light">
                   {technology.name}
                 </p>
-                <p className="text-lg mt-5">{technology.description}</p>
+                <p className="text-[1.2rem] mt-5">{technology.description}</p>
               </div>
             )}
           </div>
