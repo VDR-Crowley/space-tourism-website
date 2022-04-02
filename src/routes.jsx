@@ -31,6 +31,7 @@ export default function ReactRoutes() {
           element={<Technology request={request} />}
           exact
         />
+        <Route path="*" element={<Home />} />
       </Routes>
     </main>
   );
