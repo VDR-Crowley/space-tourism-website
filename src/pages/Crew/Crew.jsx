@@ -99,7 +99,7 @@ function Crew() {
                 <p className="text-3xl lg:text-5xl py-2 lg:py-8 font-light uppercase">
                   {crew.name}
                 </p>
-                <p className="mt-5">{crew.bio}</p>
+                <p className="mt-5 lg:text-2xl">{crew.bio}</p>
               </div>
             )}
 
