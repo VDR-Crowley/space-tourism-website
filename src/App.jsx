@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
 import MenuHamburger from './components/MenuHamburger';
 
-import history from './history';
+import history from './services/history';
 import ReactRoutes from './routes';
 
 function App() {

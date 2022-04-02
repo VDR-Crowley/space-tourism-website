@@ -11,7 +11,7 @@ function Header() {
   }, []);
 
   return (
-    <div className="w-full flex mt-5 items-center justify-between max-w-screen-2xl mx-auto">
+    <header className="w-full flex mt-5 items-center justify-between max-w-screen-2xl mx-auto">
       <div className="pl-5">
         <img
           src="assets/images/shared/logo.svg"
@@ -103,7 +103,7 @@ function Header() {
           </p>
         </Link>
       </nav>
-    </div>
+    </header>
   );
 }
 

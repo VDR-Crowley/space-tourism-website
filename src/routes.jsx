@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import Home from './pages/Home';
 import Crew from './pages/Crew/Crew';
 import Destination from './pages/Destination/Destination';
@@ -18,7 +17,7 @@ export default function ReactRoutes() {
   }, []);
 
   return (
-    <div className="overflow-x-hidden max-w-screen-2xl mx-auto">
+    <main className="overflow-x-hidden max-w-screen-2xl mx-auto">
       <Routes location={location}>
         <Route path="/" element={<Home />} exact />
         <Route
@@ -33,6 +32,6 @@ export default function ReactRoutes() {
           exact
         />
       </Routes>
-    </div>
+    </main>
   );
 }
