@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 html {
+  color: black;
 }
 
 body {
