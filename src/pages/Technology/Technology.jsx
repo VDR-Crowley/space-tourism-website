@@ -1,17 +1,19 @@
 import React from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-function Technology() {
+function Technology(request) {
   const [technologys, setTechnologys] = React.useState();
   const [technology, setTechnology] = React.useState();
-  const [isLoading, setIsLoading] = React.useState(false);
   const [indexActive, setIndexActive] = React.useState(0);
 
   const location = useLocation();
 
   React.useEffect(() => {
-    loadData();
+    if (request.request) {
+      setTechnologys(request.request.technology);
+      setTechnology(request.request.technology[0]);
+    }
   }, []);
 
   React.useEffect(() => {
@@ -30,19 +32,6 @@ function Technology() {
       }
     }
   }, [location.pathname]);
-
-  async function loadData() {
-    setIsLoading(true);
-    await fetch('data.json')
-      .then((res) => res.json())
-      .then((req) => {
-        console.log(req);
-        setTechnologys(req.technology);
-        setTechnology(req.technology[0]);
-      })
-      .catch((e) => console.log('erro'))
-      .finally(() => setIsLoading(false));
-  }
 
   function handleTec(number = 1) {
     const tec = technologys.find((_, index) => index === number);

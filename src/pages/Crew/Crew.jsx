@@ -1,21 +1,21 @@
 import React from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import './Crew.module.css';
 
-function Crew() {
+function Crew(request) {
   const [crews, setCrews] = React.useState();
   const [crew, setCrew] = React.useState();
-  const [isLoading, setIsLoading] = React.useState(false);
   const [indexActive, setIndexActive] = React.useState(0);
 
   const location = useLocation();
 
-  React.useEffect(() => {});
-
   React.useEffect(() => {
-    loadData();
+    if (request.request) {
+      setCrews(request.request.crew);
+      setCrew(request.request.crew[0]);
+    }
   }, []);
 
   React.useEffect(() => {
@@ -35,18 +35,6 @@ function Crew() {
       }
     }
   }, [location.pathname]);
-
-  async function loadData() {
-    setIsLoading(true);
-    await fetch('data.json')
-      .then((res) => res.json())
-      .then((req) => {
-        setCrews(req.crew);
-        setCrew(req.crew[0]);
-      })
-      .catch((e) => console.log('erro'))
-      .finally(() => setIsLoading(false));
-  }
 
   function handleCrew(number = 1) {
     const crew = crews.find((item, index) => index === number);

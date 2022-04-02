@@ -1,17 +1,18 @@
 import React from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-function Destination() {
+function Destination(request) {
   const [destinations, setDestinations] = React.useState();
   const [destination, setDestination] = React.useState();
   const [activeItem, setActiveItem] = React.useState('Moon');
-  const [isLoading, setIsLoading] = React.useState(false);
   const location = useLocation();
 
   React.useEffect(() => {
-    loadData();
+    if (request.request) {
+      setDestinations(request.request.destinations);
+      setDestination(request.request.destinations[0]);
+    }
   }, []);
 
   React.useEffect(() => {
@@ -32,23 +33,7 @@ function Destination() {
     }
   }, [location.pathname]);
 
-  async function loadData() {
-    setIsLoading(true);
-    await fetch('data.json')
-      .then((res) => res.json())
-      .then((req) => {
-        setDestinations(req.destinations);
-        console.log(req);
-        const destination = req.destinations.find(
-          (item) => item.name === 'Moon',
-        );
-        setDestination(destination);
-      })
-      .catch((e) => console.log('erro'))
-      .finally(() => setIsLoading(false));
-  }
-
-  function handleDestination(name = Moon) {
+  function handleDestination(name = 'Moon') {
     const destination = destinations.find((item) => item.name === name);
     setDestination(destination);
   }

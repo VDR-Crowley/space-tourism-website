@@ -3,11 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 function Home() {
-  const styles = {
-    backgroundSize: '100vw 100vh',
-    backgroundRepeat: 'no-repeat',
-  };
-
   const location = useLocation();
 
   React.useEffect(() => {
@@ -34,10 +29,7 @@ function Home() {
       animate={{ x: 0 }}
       style={{ height: 'calc(100vh - 5.5rem)' }}
     >
-      <div
-        className="pt-28 pb-16 lg:py-44 grid grid-cols-1 gap-y-10 lg:grid-cols-4"
-        styles={styles}
-      >
+      <div className="pt-28 pb-16 lg:py-44 grid grid-cols-1 gap-y-10 lg:grid-cols-4">
         <div
           className="text-white justify-self-end text-center lg:text-left max-w-lg 
           lg:max-w-xl col-span-1 lg:pl-5 lg:col-span-2 m-auto"
